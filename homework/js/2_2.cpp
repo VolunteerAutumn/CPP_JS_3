@@ -51,9 +51,12 @@ function divideFractions(f1, f2) {
     return simplify({ num: f1.num * f2.den, den: f1.den * f2.num });
 }
 
+function fractionToString(f) {
+    return `${f.num}/${f.den}`;
+}
 
+console.log("Add:", fractionToString(addFractions(Io1, Io2)));      
+console.log("Subtract:", fractionToString(subtractFractions(Io1, Io2))); 
+console.log("Multiply:", fractionToString(multiplyFractions(Io1, Io2))); 
+console.log("Divide:", fractionToString(divideFractions(Io1, Io2)));   
 
-console.log("Add:", addFractions(Io1, Io2));       // 5/6
-console.log("Subtract:", subtractFractions(Io1,Io2)); // -1/6
-console.log("Multiply:", multiplyFractions(Io1,Io2)); // 1/6
-console.log("Divide:", divideFractions(Io1,Io2));     // 2/3

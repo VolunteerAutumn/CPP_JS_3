@@ -1,21 +1,17 @@
 alert("Time test begins now.");
 
-// --- TIME OBJECT ---
 const Time = new Object();
 Time.hours = 20;
 Time.minutes = 30;
 Time.seconds = 45;
 
-// --- FUNCTION TO SHOW TIME ---
 function showTime(obj) {
-    // Pad with leading zeros for nice display
     let h = obj.hours.toString().padStart(2, '0');
     let m = obj.minutes.toString().padStart(2, '0');
     let s = obj.seconds.toString().padStart(2, '0');
     console.log(`${h}:${m}:${s}`);
 }
 
-// --- FUNCTION TO ADD SECONDS ---
 function addSeconds(obj, sec) {
     obj.seconds += sec;
     while (obj.seconds >= 60) {
@@ -31,7 +27,6 @@ function addSeconds(obj, sec) {
     }
 }
 
-// --- FUNCTION TO ADD MINUTES ---
 function addMinutes(obj, min) {
     obj.minutes += min;
     while (obj.minutes >= 60) {
@@ -43,7 +38,6 @@ function addMinutes(obj, min) {
     }
 }
 
-// --- FUNCTION TO ADD HOURS ---
 function addHours(obj, hr) {
     obj.hours += hr;
     while (obj.hours >= 24) {
